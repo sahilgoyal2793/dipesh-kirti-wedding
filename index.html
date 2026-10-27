@@ -1,0 +1,499 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Dipesh &amp; Kirti</title>
+<meta name="description" content="Dipesh & Kirti's wedding, 3–4 January 2027, Krishna Hotel & Resort, Pushkar.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Rozha+One&family=Pinyon+Script&family=Spectral:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Tiro+Devanagari+Hindi&display=swap">
+<meta property="og:title" content="Dipesh &amp; Kirti — Wedding Invitation">
+<meta property="og:description" content="3–4 January 2027 · Krishna Hotel &amp; Resort, Pushkar">
+<meta property="og:image" content="img/couple_full.jpg">
+<style>
+*,*::before,*::after{box-sizing:border-box}
+body{margin:0}
+img{max-width:100%}
+[hidden]{display:none!important}
+:root{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+/* Layout: a single scroll through a Rajasthani haveli — arched frames, sandstone ground,
+   rose-and-saffron accents from Pushkar's rose gardens and ghats. One look, both themes. */
+:root{
+  --sand:#f6ecdc;        /* page ground: sandstone ivory */
+  --sand-deep:#ecdcc2;   /* alternating band */
+  --rose:#7a1f35;        /* Pushkar rose / maroon */
+  --rose-ink:#4a1020;    /* deepest text on sand */
+  --saffron:#c98a2b;     /* gilt / marigold */
+  --lake:#21364f;        /* Pushkar lake at dusk */
+  --ink:#3b2a24;         /* body text */
+  --muted:#7b6457;
+  --tbd:#b5541c;         /* placeholder marker */
+  --display:"Rozha One","Tiro Devanagari Hindi",Georgia,serif;
+  --script:"Pinyon Script","Snell Roundhand",cursive;
+  --body:"Spectral",Georgia,"Times New Roman",serif;
+  --hindi:"Tiro Devanagari Hindi","Noto Serif Devanagari",serif;
+  color-scheme:light;
+}
+html{scroll-behavior:smooth}
+body{background:var(--sand);color:var(--ink);font-family:var(--body);font-size:17px;line-height:1.65;font-weight:400}
+h1,h2,h3{font-family:var(--display);font-weight:400;color:var(--rose);text-wrap:balance;margin:0;line-height:1.15}
+p{margin:0}
+a{color:var(--rose)}
+:focus-visible{outline:2px solid var(--saffron);outline-offset:3px}
+.wrap{max-width:1040px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+section{padding-block:88px}
+.band{background:var(--sand-deep)}
+.eyebrow{font-family:var(--body);font-size:13px;letter-spacing:.24em;text-transform:uppercase;color:var(--saffron);font-weight:600}
+.hindi{font-family:var(--hindi)}
+.head{display:grid;gap:10px;justify-items:center;text-align:center;margin-bottom:48px}
+.head h2{font-size:clamp(34px,6vw,52px)}
+.rule{width:140px;height:14px;color:var(--saffron)}
+
+/* placeholders: anything Sahil still needs to confirm */
+.tbd{color:var(--tbd);border-bottom:1.5px dashed var(--tbd);font-style:italic}
+.tbd-box{border:1.5px dashed var(--tbd);color:var(--tbd);font-style:italic}
+
+/* ---------- Gate ---------- */
+.gate{position:fixed;inset:0;z-index:50;display:grid;place-items:center;background:var(--rose-ink);overflow:hidden;cursor:pointer}
+.door{position:absolute;top:0;bottom:0;width:50%;background:
+  radial-gradient(circle at 50% 50%,transparent 0 38px,rgba(201,138,43,.18) 39px 40px,transparent 41px) 0 0/90px 90px,
+  linear-gradient(var(--rose),var(--rose-ink));transition:transform 1.4s cubic-bezier(.7,0,.2,1)}
+.door.l{left:0;border-right:2px solid var(--saffron)}
+.door.r{right:0;border-left:2px solid var(--saffron)}
+.gate.open .door.l{transform:translateX(-101%)}
+.gate.open .door.r{transform:translateX(101%)}
+.gate.open .seal{opacity:0;transform:scale(.9)}
+.gate.gone{display:none}
+.seal{position:relative;z-index:2;display:grid;justify-items:center;gap:14px;text-align:center;color:var(--sand);transition:opacity .5s,transform .5s;padding:24px}
+.seal .ganesh{font-family:var(--hindi);color:var(--saffron);font-size:18px}
+.seal .names{font-family:var(--script);font-size:clamp(46px,11vw,84px);line-height:1;color:#f3dcae}
+.seal .knock{display:grid;place-items:center;width:96px;height:96px;border-radius:50%;border:2px solid var(--saffron);background:rgba(0,0,0,.18);font-family:var(--display);font-size:30px;color:var(--saffron);animation:pulse 2.4s ease-in-out infinite}
+.seal small{letter-spacing:.22em;text-transform:uppercase;font-size:12px;color:#e8cfa0}
+@keyframes pulse{50%{box-shadow:0 0 0 14px rgba(201,138,43,.12)}}
+
+/* ---------- Hero ---------- */
+.hero{position:relative;min-height:min(92vh,860px);display:grid;align-items:end;color:var(--sand);overflow:hidden;padding-block:0}
+.hero img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 30%}
+.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(40,10,18,.25) 0%,rgba(40,10,18,0) 35%,rgba(40,10,18,.85) 100%)}
+.hero .wrap{position:relative;z-index:1;padding-block:0 64px;display:grid;gap:12px;justify-items:center;text-align:center;width:100%}
+.hero .ganesh{font-family:var(--hindi);color:#f3dcae;font-size:17px}
+.hero h1{font-family:var(--script);color:#fff3dc;font-size:clamp(56px,13vw,124px);line-height:1;white-space:nowrap}
+.hero .when{font-family:var(--display);font-size:clamp(20px,3.4vw,28px);color:#f3dcae}
+.hero .tag{font-size:15px;letter-spacing:.2em;text-transform:uppercase}
+
+/* ---------- Save the date ---------- */
+.std{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.1fr);gap:56px;align-items:center}
+.arch{aspect-ratio:3/4;max-width:100%;border-radius:999px 999px 6px 6px;overflow:hidden;border:6px solid var(--sand);outline:1.5px solid var(--saffron);outline-offset:8px;box-shadow:0 30px 60px -30px rgba(74,16,32,.45)}
+.arch img{width:100%;height:100%;object-fit:cover;object-position:40% 25%}
+.std-text{display:grid;gap:22px;min-width:0}
+.std-text h2{font-size:clamp(36px,6vw,56px)}
+.datebar{display:flex;align-items:center;gap:18px;font-family:var(--display);color:var(--rose)}
+.datebar .d{font-size:clamp(64px,10vw,96px);line-height:1}
+.datebar .m{display:grid;font-family:var(--body);font-size:15px;letter-spacing:.2em;text-transform:uppercase;color:var(--ink);line-height:1.5;border-left:1.5px solid var(--saffron);padding-left:16px}
+.venue-line{font-size:19px}
+.venue-line strong{color:var(--rose-ink);font-weight:600}
+
+/* ---------- Couple ---------- */
+.couple{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:32px}
+.person{display:grid;gap:14px;justify-items:center;text-align:center;padding:36px 28px;background:var(--sand);border:1px solid rgba(201,138,43,.45);border-radius:200px 200px 10px 10px}
+.person .ph{width:150px;height:150px;border-radius:50%;display:grid;place-items:center;font-size:13px;padding:14px;text-align:center}
+.person h3{font-family:var(--script);font-size:52px;line-height:1.1}
+.person .role{font-size:13px;letter-spacing:.24em;text-transform:uppercase;color:var(--saffron);font-weight:600}
+.person p{max-width:36ch}
+.couple-tag{margin-top:36px;text-align:center;font-family:var(--hindi);font-size:22px;color:var(--rose)}
+
+/* ---------- Blessings ---------- */
+.bless{text-align:center;display:grid;gap:28px;justify-items:center}
+.bless .shloka{font-family:var(--hindi);font-size:24px;color:var(--rose)}
+.families{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px;width:100%;max-width:820px}
+.fam{display:grid;gap:6px;padding:24px;border-top:2px solid var(--saffron)}
+.fam h3{font-size:24px}
+.bless .note{max-width:60ch;font-style:italic;color:var(--muted)}
+
+/* ---------- Celebrations ---------- */
+.days{display:grid;gap:56px}
+.day h3{font-size:28px;display:flex;align-items:baseline;gap:14px;flex-wrap:wrap;margin-bottom:22px}
+.day h3 span{font-family:var(--body);font-size:14px;letter-spacing:.2em;text-transform:uppercase;color:var(--muted)}
+.events{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:20px}
+.event{display:grid;gap:8px;align-content:start;padding:26px 22px 22px;background:var(--sand);border-radius:120px 120px 8px 8px;border:1px solid rgba(201,138,43,.5);text-align:center;justify-items:center}
+.event .ico{width:46px;height:46px;color:var(--saffron)}
+.event h4{margin:0;font-family:var(--display);font-weight:400;font-size:24px;color:var(--rose)}
+.event .t{font-variant-numeric:tabular-nums}
+.event .where{font-size:15px;color:var(--muted)}
+.note-tbd{margin-top:28px;text-align:center;font-size:15px;color:var(--tbd);font-style:italic}
+
+/* ---------- Venue ---------- */
+.venue{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,1fr);gap:48px;align-items:start}
+.venue-card{background:var(--lake);color:#efe4d2;padding:40px 34px;border-radius:10px;display:grid;gap:16px}
+.venue-card h3{color:#f3dcae;font-size:34px}
+.venue-card a{color:#f3dcae}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:13px 22px;border-radius:999px;border:1.5px solid currentColor;font-family:var(--body);font-weight:600;font-size:15px;letter-spacing:.06em;text-decoration:none;cursor:pointer;background:transparent;color:inherit}
+.btn.solid{background:var(--rose);border-color:var(--rose);color:var(--sand)}
+.btn.solid:hover{background:var(--rose-ink)}
+.travel{display:grid;gap:18px}
+.travel div{display:grid;grid-template-columns:110px minmax(0,1fr);gap:14px;padding-bottom:16px;border-bottom:1px solid rgba(122,31,53,.18)}
+.travel dt{font-size:13px;letter-spacing:.2em;text-transform:uppercase;color:var(--saffron);font-weight:600;padding-top:3px}
+.travel dd{margin:0}
+
+/* ---------- Dress code ---------- */
+.dress{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px;max-width:820px;margin:0 auto}
+.dress div{padding:26px;border:1px solid rgba(201,138,43,.5);border-radius:8px;display:grid;gap:8px;background:var(--sand)}
+.dress h3{font-size:22px}
+
+/* ---------- RSVP ---------- */
+.rsvp{max-width:620px;margin:0 auto;display:grid;gap:22px;background:var(--sand);padding:36px clamp(20px,5vw,44px);border-radius:10px;border:1px solid rgba(201,138,43,.5)}
+.field{display:grid;gap:8px}
+.field>label,.field>legend{font-size:13px;letter-spacing:.18em;text-transform:uppercase;font-weight:600;color:var(--rose)}
+fieldset{border:0;margin:0;padding:0;display:grid;gap:10px}
+input[type=text],select,textarea{font:inherit;color:var(--ink);background:#fffaf1;border:1px solid rgba(122,31,53,.3);border-radius:6px;padding:11px 13px;width:100%;box-sizing:border-box}
+textarea{min-height:90px;resize:vertical}
+.choices{display:flex;flex-wrap:wrap;gap:10px 22px}
+.choices label{display:flex;gap:8px;align-items:center;cursor:pointer}
+input[type=radio],input[type=checkbox]{accent-color:var(--rose);width:18px;height:18px}
+.rsvp .by{text-align:center;color:var(--muted)}
+.rsvp .err{color:var(--tbd);font-size:15px}
+
+/* ---------- Countdown ---------- */
+.count{background:var(--rose);color:var(--sand);text-align:center}
+.count h2{color:#f3dcae}
+.clock{display:flex;justify-content:center;gap:clamp(14px,4vw,40px);flex-wrap:wrap;margin-top:8px}
+.clock div{display:grid;min-width:76px}
+.clock b{font-family:var(--display);font-weight:400;font-size:clamp(46px,9vw,80px);line-height:1;font-variant-numeric:tabular-nums;color:#fff3dc}
+.clock span{font-size:12px;letter-spacing:.24em;text-transform:uppercase;color:#f3dcae}
+
+/* ---------- Footer ---------- */
+footer{background:var(--rose-ink);color:#e8d6bd;text-align:center;padding-block:64px}
+footer .wrap{display:grid;gap:12px;justify-items:center}
+footer .mono{font-family:var(--script);font-size:64px;color:#f3dcae;line-height:1}
+footer .hash{color:var(--saffron);letter-spacing:.08em}
+
+@media (max-width:760px){
+  section{padding-block:64px}
+  .std,.venue{grid-template-columns:minmax(0,1fr);gap:40px}
+  .arch{max-width:340px;margin:0 auto;width:100%}
+  .couple,.families,.dress{grid-template-columns:minmax(0,1fr)}
+  .travel div{grid-template-columns:minmax(0,1fr);gap:4px}
+}
+@media (prefers-reduced-motion:reduce){
+  *{animation:none!important;transition:none!important}
+  html{scroll-behavior:auto}
+}
+</style>
+</head>
+<body>
+
+
+<!-- Entry gate: tap to open the haveli doors -->
+<div class="gate" id="gate" role="button" tabindex="0" aria-label="Open the invitation">
+  <div class="door l"></div><div class="door r"></div>
+  <div class="seal">
+    <div class="ganesh">॥ श्री गणेशाय नमः ॥</div>
+    <div class="names">Dipesh &amp; Kirti</div>
+    <div class="knock" aria-hidden="true">D&nbsp;K</div>
+    <small>Tap to open the invitation</small>
+  </div>
+</div>
+
+<main>
+<!-- Hero -->
+<section class="hero">
+  <img src="img/couple_full.jpg" alt="Dipesh and Kirti together in white and gold, with fairy lights behind them">
+  <div class="wrap">
+    <div class="ganesh">॥ श्री गणेशाय नमः ॥</div>
+    <h1>Dipesh &amp; Kirti</h1>
+    <div class="when">3 &amp; 4 January 2027</div>
+    <div class="tag">Pushkar · Rajasthan</div>
+  </div>
+</section>
+
+<!-- Save the date -->
+<section>
+  <div class="wrap std">
+    <div class="arch"><img src="img/couple_close.jpg" alt="Kirti smiling, her mehndi hands holding Dipesh's arm"></div>
+    <div class="std-text">
+      <div class="eyebrow">Save the date</div>
+      <h2>We're getting married!</h2>
+      <div class="datebar">
+        <div class="d">3–4</div>
+        <div class="m"><span>January</span><span>2027</span></div>
+      </div>
+      <p class="venue-line">at <strong>Krishna Hotel &amp; Resort, Pushkar</strong></p>
+      <p class="hindi" style="font-size:20px;color:var(--rose)">आपके आशीर्वाद और साथ के बिना यह जश्न अधूरा है।</p>
+      <p>Two days of rituals, music and family in the holy town of Pushkar. We would love you to be there with us.</p>
+    </div>
+  </div>
+</section>
+
+<!-- Meet the couple -->
+<section class="band">
+  <div class="wrap">
+    <div class="head">
+      <div class="eyebrow">Meet the couple</div>
+      <h2>दो दिल, एक सफ़र</h2>
+      <svg class="rule" viewBox="0 0 140 14" aria-hidden="true"><path d="M0 7h58M82 7h58" stroke="currentColor" stroke-width="1.2"/><path d="M70 1l6 6-6 6-6-6z" fill="currentColor"/></svg>
+    </div>
+    <div class="couple">
+      <article class="person">
+        <div class="ph tbd-box">Dipesh's photo (to be added)</div>
+        <div class="role">The groom</div>
+        <h3>Dipesh</h3>
+        <p><span class="tbd">A few lines about Dipesh: work, city, what he loves. To be added.</span></p>
+      </article>
+      <article class="person">
+        <div class="ph tbd-box">Kirti's photo (to be added)</div>
+        <div class="role">The bride</div>
+        <h3>Kirti</h3>
+        <p><span class="tbd">A few lines about Kirti: work, city, what she loves. To be added.</span></p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- Blessings / families -->
+<section>
+  <div class="wrap bless">
+    <div class="shloka">॥ श्री गणेशाय नमः ॥</div>
+    <div class="head" style="margin-bottom:0">
+      <div class="eyebrow">With the blessings of our parents &amp; elders</div>
+      <h2>Our families</h2>
+    </div>
+    <div class="families">
+      <div class="fam">
+        <div class="eyebrow">Groom's family</div>
+        <h3><span class="tbd">Parents' names</span></h3>
+        <p><span class="tbd">Grandparents / family name, city</span></p>
+      </div>
+      <div class="fam">
+        <div class="eyebrow">Bride's family</div>
+        <h3><span class="tbd">Parents' names</span></h3>
+        <p><span class="tbd">Grandparents / family name, city</span></p>
+      </div>
+    </div>
+    <p class="note">With the blessings of our grandparents and elders, we request the pleasure of your company as Dipesh and Kirti begin their new life together.</p>
+  </div>
+</section>
+
+<!-- Celebrations -->
+<section class="band" id="events">
+  <div class="wrap">
+    <div class="head">
+      <div class="eyebrow">The wedding celebrations</div>
+      <h2>3 &amp; 4 January 2027</h2>
+      <p>Krishna Hotel &amp; Resort, Pushkar</p>
+    </div>
+    <div class="days" id="days"></div>
+    <p class="note-tbd">Function names, timings and spots inside the resort are placeholders until the family confirms the schedule.</p>
+  </div>
+</section>
+
+<!-- Venue & travel -->
+<section>
+  <div class="wrap">
+    <div class="head">
+      <div class="eyebrow">Venue &amp; travel</div>
+      <h2>Getting to Pushkar</h2>
+    </div>
+    <div class="venue">
+      <div class="venue-card">
+        <div class="eyebrow" style="color:#f3dcae">The venue</div>
+        <h3>Krishna Hotel &amp; Resort</h3>
+        <p>Pushkar, Rajasthan</p>
+        <p><span class="tbd" style="color:#f3b98a;border-color:#f3b98a">Full address to be added</span></p>
+        <div><a class="btn" href="https://www.google.com/maps/search/?api=1&amp;query=Krishna+Hotel+%26+Resort+Pushkar" target="_blank" rel="noopener">Open in Google Maps</a></div>
+      </div>
+      <dl class="travel">
+        <div><dt>By train</dt><dd>Ajmer Junction is the nearest major station, about 15 km from Pushkar by road.</dd></div>
+        <div><dt>By air</dt><dd>Kishangarh Airport (about 45 km) has limited flights. Jaipur International Airport (about 150 km) has the most connections.</dd></div>
+        <div><dt>By road</dt><dd>Pushkar is around 3 hours' drive from Jaipur via Ajmer.</dd></div>
+        <div><dt>Stay &amp; pickup</dt><dd><span class="tbd">Room and pickup arrangements for guests, to be confirmed.</span></dd></div>
+      </dl>
+    </div>
+  </div>
+</section>
+
+<!-- Dress code -->
+<section class="band">
+  <div class="wrap">
+    <div class="head">
+      <div class="eyebrow">Dress code</div>
+      <h2>What to wear</h2>
+    </div>
+    <div class="dress">
+      <div><h3>Ladies</h3><p><span class="tbd">Dress code to be confirmed</span></p></div>
+      <div><h3>Gentlemen</h3><p><span class="tbd">Dress code to be confirmed</span></p></div>
+    </div>
+    <p class="note-tbd">Early January nights in Pushkar get cold, so bring a warm shawl or jacket for evening functions.</p>
+  </div>
+</section>
+
+<!-- RSVP -->
+<section id="rsvp">
+  <div class="wrap">
+    <div class="head">
+      <div class="eyebrow">RSVP</div>
+      <h2>Will you join us?</h2>
+      <p>Kindly reply by <span class="tbd">RSVP date to be confirmed</span></p>
+    </div>
+    <form class="rsvp" id="rsvpForm" novalidate>
+      <div class="field">
+        <label for="rName">Your name</label>
+        <input type="text" id="rName" autocomplete="name" placeholder="Full name">
+      </div>
+      <fieldset class="field">
+        <legend>Will you attend?</legend>
+        <div class="choices">
+          <label><input type="radio" name="attend" id="rYes" value="yes" checked> Yes, with joy</label>
+          <label><input type="radio" name="attend" id="rNo" value="no"> Sorry, can't make it</label>
+        </div>
+      </fieldset>
+      <div class="field">
+        <label for="rCount">Number of guests</label>
+        <select id="rCount"><option>1</option><option>2</option><option>3</option><option>4</option><option>5</option><option>6</option></select>
+      </div>
+      <fieldset class="field" id="rEventsWrap">
+        <legend>Functions you'll attend</legend>
+        <div class="choices" id="rEvents"></div>
+      </fieldset>
+      <div class="field">
+        <label for="rMsg">Message for the couple (optional)</label>
+        <textarea id="rMsg" placeholder="Your blessings…"></textarea>
+      </div>
+      <p class="err" id="rErr" hidden></p>
+      <button class="btn solid" type="submit">Send RSVP on WhatsApp</button>
+      <p class="by">Opens WhatsApp with your reply ready to send to <span id="rTo"></span>.</p>
+    </form>
+  </div>
+</section>
+
+<!-- Countdown -->
+<section class="count">
+  <div class="wrap" style="display:grid;gap:18px;justify-items:center">
+    <div class="eyebrow" style="color:#f3dcae">Counting down to</div>
+    <h2>3 January 2027</h2>
+    <div class="clock" aria-live="off">
+      <div><b id="cD">--</b><span>Days</span></div>
+      <div><b id="cH">--</b><span>Hours</span></div>
+      <div><b id="cM">--</b><span>Minutes</span></div>
+      <div><b id="cS">--</b><span>Seconds</span></div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="mono">D &amp; K</div>
+    <p>Dipesh &amp; Kirti · 3–4 January 2027 · Krishna Hotel &amp; Resort, Pushkar</p>
+    <p class="hash">#DipeshWedsKirti</p>
+    <p class="hindi">शादी में ज़रूर आइए 🙏</p>
+  </div>
+</footer>
+
+<script>
+/* ===== Edit wedding details here ===== */
+const WEDDING = {
+  start: "2027-01-03T00:00:00+05:30",       // countdown target (IST); update once first function time is fixed
+  whatsapp: "",                              // RSVP number with country code, e.g. "919876543210" — to be added
+  days: [
+    { label: "Day 1", date: "Sunday, 3 January 2027", events: [
+      { name: "", time: "", where: "", icon: "diya" },
+      { name: "", time: "", where: "", icon: "drum" },
+    ]},
+    { label: "Day 2", date: "Monday, 4 January 2027", events: [
+      { name: "", time: "", where: "", icon: "fire" },
+      { name: "", time: "", where: "", icon: "rings" },
+    ]},
+  ],
+};
+
+const ICONS = {
+  diya:'<path d="M8 30c0 6 7 10 16 10s16-4 16-10H8z" fill="currentColor"/><path d="M24 26c-4-4-3-9 0-14 3 5 4 10 0 14z" fill="currentColor" opacity=".7"/>',
+  drum:'<ellipse cx="24" cy="14" rx="14" ry="5" fill="none" stroke="currentColor" stroke-width="2.5"/><path d="M10 14v18c0 3 6 6 14 6s14-3 14-6V14" fill="none" stroke="currentColor" stroke-width="2.5"/><path d="M12 18l24 16M36 18L12 34" stroke="currentColor" stroke-width="1.5"/>',
+  fire:'<path d="M24 6c6 8 12 12 12 22a12 12 0 01-24 0c0-6 4-9 6-14 2 4 3 6 6 7-2-5-2-10 0-15z" fill="currentColor"/><path d="M6 42h36" stroke="currentColor" stroke-width="3"/>',
+  rings:'<circle cx="18" cy="28" r="10" fill="none" stroke="currentColor" stroke-width="3"/><circle cx="30" cy="28" r="10" fill="none" stroke="currentColor" stroke-width="3"/><path d="M27 10l3-4 3 4-3 4z" fill="currentColor"/>',
+};
+const esc = s => String(s).replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+const val = (v, ph) => v ? esc(v) : `<span class="tbd">${ph}</span>`;
+
+// Events
+const daysEl = document.getElementById("days");
+const evBox = document.getElementById("rEvents");
+let n = 0;
+WEDDING.days.forEach(day => {
+  const cards = day.events.map(e => {
+    n++;
+    return `<article class="event">
+      <svg class="ico" viewBox="0 0 48 48" aria-hidden="true">${ICONS[e.icon]||ICONS.diya}</svg>
+      <h4>${val(e.name, "Function name")}</h4>
+      <div class="t">${val(e.time, "Time TBC")}</div>
+      <div class="where">${val(e.where, "Spot in resort TBC")}</div>
+    </article>`;
+  }).join("");
+  daysEl.insertAdjacentHTML("beforeend",
+    `<div class="day"><h3>${esc(day.label)} <span>${esc(day.date)}</span></h3><div class="events">${cards}</div></div>`);
+  day.events.forEach((e, i) => {
+    const id = `ev_${day.label.replace(/\W/g,"")}_${i}`;
+    const name = e.name || `${day.label} function ${i+1}`;
+    evBox.insertAdjacentHTML("beforeend",
+      `<label><input type="checkbox" id="${id}" value="${esc(name)}" checked> ${esc(name)}</label>`);
+  });
+});
+
+// Gate
+const gate = document.getElementById("gate");
+function openGate(){
+  if (gate.classList.contains("open")) return;
+  gate.classList.add("open");
+  const reduce = matchMedia("(prefers-reduced-motion: reduce)").matches;
+  setTimeout(() => gate.classList.add("gone"), reduce ? 0 : 1450);
+}
+gate.addEventListener("click", openGate);
+gate.addEventListener("keydown", e => { if (e.key === "Enter" || e.key === " ") { e.preventDefault(); openGate(); } });
+
+// Countdown
+const target = new Date(WEDDING.start).getTime();
+const pad = x => String(x).padStart(2, "0");
+function tick(){
+  let d = Math.max(0, target - Date.now()) / 1000;
+  const D = Math.floor(d / 86400); d -= D * 86400;
+  const H = Math.floor(d / 3600); d -= H * 3600;
+  const M = Math.floor(d / 60); const S = Math.floor(d - M * 60);
+  cD.textContent = D; cH.textContent = pad(H); cM.textContent = pad(M); cS.textContent = pad(S);
+}
+tick(); setInterval(tick, 1000);
+
+// RSVP → WhatsApp
+document.getElementById("rTo").innerHTML = WEDDING.whatsapp ? "+" + esc(WEDDING.whatsapp) : '<span class="tbd">the family (number to be added)</span>';
+const attendRadios = document.querySelectorAll('input[name="attend"]');
+attendRadios.forEach(r => r.addEventListener("change", () => {
+  const yes = document.getElementById("rYes").checked;
+  document.getElementById("rEventsWrap").hidden = !yes;
+  document.getElementById("rCount").closest(".field").hidden = !yes;
+}));
+document.getElementById("rsvpForm").addEventListener("submit", e => {
+  e.preventDefault();
+  const err = document.getElementById("rErr");
+  const name = document.getElementById("rName").value.trim();
+  if (!name) { err.textContent = "Please enter your name so the family knows who replied."; err.hidden = false; document.getElementById("rName").focus(); return; }
+  if (!WEDDING.whatsapp) { err.textContent = "The RSVP WhatsApp number hasn't been added yet, so this button can't send anything for now."; err.hidden = false; return; }
+  err.hidden = true;
+  const yes = document.getElementById("rYes").checked;
+  const evs = [...evBox.querySelectorAll("input:checked")].map(i => i.value);
+  const msg = document.getElementById("rMsg").value.trim();
+  const lines = [
+    "RSVP – Dipesh & Kirti's wedding 💍",
+    `Name: ${name}`,
+    yes ? `Attending: Yes 🙏 (${document.getElementById("rCount").value} guest(s))` : "Attending: Sorry, can't make it",
+  ];
+  if (yes && evs.length) lines.push(`Functions: ${evs.join(", ")}`);
+  if (msg) lines.push(`Message: ${msg}`);
+  const a = document.createElement("a");
+  a.href = `https://wa.me/${WEDDING.whatsapp}?text=${encodeURIComponent(lines.join("\n"))}`;
+  a.target = "_blank"; a.rel = "noopener";
+  document.body.appendChild(a); a.click(); a.remove();
+});
+</script>
+
+</body>
+</html>
